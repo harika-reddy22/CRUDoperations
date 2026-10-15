@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Food | Harika's Flavour House</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✿</span>
+            Harika's <span>Flavour House</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="list.html">Our Menu</a>
+            <a href="listOne.html">Find Food</a>
+            <a href="insert.html">Add Food</a>
+            <a href="update.html">Update</a>
+            <a href="delete.html" class="active">Delete</a>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section class="delete-banner">
+        <span class="eyebrow">HARIKA'S FLAVOUR HOUSE</span>
+        <h1>Manage Your Menu</h1>
+        <p>Keep your food collection fresh and organised.</p>
+    </section>
+
+    <!-- DELETE SECTION -->
+    <section class="delete-section">
+
+        <div class="delete-container">
+
+            <div class="delete-image">
+                <img
+                    src="https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=1000"
+                    alt="Restaurant food">
+
+                <div class="delete-image-text">
+                    <span>✦ HARIKA'S FLAVOUR HOUSE</span>
+                    <h2>Curating Every<br>Delicious Choice.</h2>
+                    <p>Manage your restaurant menu with ease.</p>
+                </div>
+            </div>
+
+            <div class="delete-form-box">
+                <span class="eyebrow">REMOVE A FOOD ITEM</span>
+                <h2>Delete Food</h2>
+
+                <p class="form-subtitle">
+                    Select the food item you want to remove.
+                    Review its details before confirming.
+                </p>
+
+                <div class="form-group">
+                    <label for="foodSelect">Select Food ID & Name</label>
+
+                    <select id="foodSelect">
+                        <option value="">Loading food items...</option>
+                    </select>
+                </div>
+
+                <div id="deletePreview" class="delete-preview" hidden>
+                    <img id="previewImage" alt="Selected food">
+
+                    <div class="delete-preview-details">
+                        <span id="previewCategory" class="food-category"></span>
+                        <h3 id="previewName"></h3>
+                        <p id="previewId"></p>
+                        <p id="previewDescription"></p>
+                        <strong id="previewPrice"></strong>
+                        <p id="previewAvailability"></p>
+                    </div>
+                </div>
+
+                <button id="deleteButton"
+                        class="btn delete-button"
+                        type="button"
+                        disabled>
+                    Delete Selected Food
+                </button>
+
+                <p id="deleteMessage" role="status"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h2>Harika's Flavour House</h2>
+        <p>A World of Flavours, One Destination.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="list.html">Menu</a>
+            <a href="insert.html">Add Food</a>
+            <a href="update.html">Update</a>
+            <a href="delete.html">Delete</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Harika's Flavour House. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="js/delete.js"></script>
+</body>
+</html>

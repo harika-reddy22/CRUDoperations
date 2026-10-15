@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Harika's Flavour House</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✿</span>
+            Harika's <span>Flavour House</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="list.html" class="active">Our Menu</a>
+            <a href="listOne.html">Find Food</a>
+            <a href="insert.html">Add Food</a>
+            <a href="update.html">Update</a>
+            <a href="delete.html">Delete</a>
+        </nav>
+    </header>
+
+    <!-- PAGE BANNER -->
+    <section class="menu-banner">
+        <span class="eyebrow">HARIKA'S FLAVOUR HOUSE</span>
+        <h1>Explore Our Delicious Menu</h1>
+        <p>
+            Every dish tells a story of flavour, freshness,
+            and happiness.
+        </p>
+    </section>
+   
+
+    <!-- MENU SECTION -->
+    <section class="menu-section">
+
+        <div class="menu-top">
+            <div>
+                <span class="eyebrow">MADE FOR EVERY CRAVING</span>
+                <h2>Our Food Collection</h2>
+            </div>
+
+            <div class="filter-box">
+                <label for="categoryFilter">Choose Category</label>
+
+                <select id="categoryFilter">
+                    <option value="All">All Categories</option>
+                </select>
+            </div>
+        </div>
+
+        <p id="menuMessage" class="menu-message">
+            Loading delicious food items...
+        </p>
+
+        <div class="menu-grid" id="foodContainer"></div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h2>Harika's Flavour House</h2>
+        <p>A World of Flavours, One Destination.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="list.html">Menu</a>
+            <a href="insert.html">Add Food</a>
+            <a href="update.html">Update</a>
+            <a href="delete.html">Delete</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Harika's Flavour House. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

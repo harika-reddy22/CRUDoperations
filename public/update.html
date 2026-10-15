@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Update Food | Harika's Flavour House</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✿</span>
+            Harika's <span>Flavour House</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="list.html">Our Menu</a>
+            <a href="listOne.html">Find Food</a>
+            <a href="insert.html">Add Food</a>
+            <a href="update.html" class="active">Update</a>
+            <a href="delete.html">Delete</a>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section class="update-banner">
+        <span class="eyebrow">HARIKA'S FLAVOUR HOUSE</span>
+        <h1>Perfect Every Flavour</h1>
+        <p>Refresh your menu and keep every dish just right.</p>
+    </section>
+
+    <!-- UPDATE SECTION -->
+    <section class="update-section">
+
+        <div class="update-container">
+
+            <!-- LEFT IMAGE -->
+            <div class="update-image">
+                <img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1000"
+                    alt="Delicious restaurant food">
+
+                <div class="update-image-text">
+                    <span>✦ THE ART OF GOOD FOOD</span>
+                    <h2>Little Changes.<br>Better Flavours.</h2>
+                    <p>Crafted with care at Harika's Flavour House.</p>
+                </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="update-form-box">
+
+                <span class="eyebrow">EDIT YOUR FOOD COLLECTION</span>
+                <h2>Update Food Details</h2>
+
+                <p class="form-subtitle">
+                    Select a food item to load its existing details.
+                    Make your changes and save them.
+                </p>
+
+                <div class="form-group">
+                    <label for="foodSelect">Select Food ID & Name</label>
+
+                    <select id="foodSelect" required>
+                        <option value="">Loading food items...</option>
+                    </select>
+                </div>
+
+                <form id="updateFoodForm" enctype="multipart/form-data" hidden>
+                    <div class="form-group">
+                        <label for="food_id">Food ID</label>
+                        <input type="number" id="food_id" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="food_name">Food Name</label>
+                        <input type="text" id="food_name"
+                               maxlength="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="Pizza">Pizza</option>
+                            <option value="Burger">Burger</option>
+                            <option value="Biryani">Biryani</option>
+                            <option value="Pasta">Pasta</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Beverage">Beverage</option>
+                            <option value="Starter">Starter</option>
+                            <option value="Main Course">Main Course</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price (₹)</label>
+                        <input type="number" id="price"
+                               min="0" max="99999999.99"
+                               step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" rows="4"></textarea>
+                    </div>
+                    
+<!-- CURRENT FOOD IMAGE -->
+<div class="form-group">
+    <label>Current Food Image</label>
+
+    <div id="currentImageBox" class="update-image-preview">
+        <img
+            id="currentFoodImage"
+            alt="Current food image"
+        >
+
+        <p id="currentImageMessage">
+            Current image of the selected food item
+        </p>
+    </div>
+</div>
+
+<!-- CHANGE FOOD IMAGE -->
+<div class="form-group food-upload-group">
+
+    <label for="food_image">Change Food Image</label>
+
+    <div class="food-upload-box">
+        <span class="upload-icon">📸</span>
+
+        <h3>Give Your Dish a Fresh Look</h3>
+
+        <p>
+            Choose a new image to replace the existing one.
+            JPG, PNG or WebP • Maximum 5 MB
+        </p>
+
+        <input
+            type="file"
+            id="food_image"
+            name="food_image"
+            accept=".jpg,.jpeg,.png,.webp"
+        >
+    </div>
+
+    <!-- NEW IMAGE PREVIEW -->
+    <div id="newImagePreviewBox"
+         class="update-image-preview"
+         hidden>
+
+        <img
+            id="newImagePreview"
+            alt="New food image preview"
+        >
+
+        <p>✨ Your new food image</p>
+    </div>
+
+</div>
+
+
+                    <div class="form-group">
+                        <label for="availability">Availability</label>
+                        <select id="availability" required>
+                            <option value="1">Available</option>
+                            <option value="0">Unavailable</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary update-submit">
+                        Save Changes →
+                    </button>
+                </form>
+
+                <p id="updateMessage" role="status"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h2>Harika's Flavour House</h2>
+        <p>A World of Flavours, One Destination.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="list.html">Menu</a>
+            <a href="insert.html">Add Food</a>
+            <a href="update.html">Update</a>
+            <a href="delete.html">Delete</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Harika's Flavour House. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="js/update.js"></script>
+</body>
+</html>

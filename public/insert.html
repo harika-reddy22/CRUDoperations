@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Food | Harika's Flavour House</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✿</span>
+            Harika's <span>Flavour House</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="list.html">Our Menu</a>
+            <a href="listOne.html">Find Food</a>
+            <a href="insert.html" class="active">Add Food</a>
+            <a href="update.html">Update</a>
+            <a href="delete.html">Delete</a>
+        </nav>
+    </header>
+
+    <!-- PAGE BANNER -->
+    <section class="add-banner">
+        <span class="eyebrow">HARIKA'S FLAVOUR HOUSE</span>
+        <h1>Add Something Delicious</h1>
+        <p>Every great menu begins with a delicious idea.</p>
+    </section>
+
+    <!-- ADD FOOD SECTION -->
+    <section class="add-section">
+
+        <div class="add-container">
+
+            <!-- LEFT IMAGE -->
+            <div class="add-image">
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1000"
+                    alt="Beautiful restaurant dining experience">
+
+                <div class="add-image-text">
+                    <span>✦ HARIKA'S FLAVOUR HOUSE</span>
+                    <h2>Made with Passion.<br>Served with Love.</h2>
+                    <p>A world of flavours, one destination.</p>
+                </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="add-form-box">
+
+                <span class="eyebrow">CREATE A NEW FOOD ITEM</span>
+                <h2>Add Food to Our Menu</h2>
+
+                <p class="form-subtitle">
+                    Fill in the details below to introduce
+                    a new dish to our collection.
+                </p>
+
+                <form id="addFoodForm" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label for="food_id">Food ID</label>
+                        <input type="number" id="food_id"
+                               min="1" required
+                               placeholder="Example: 107">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="food_name">Food Name</label>
+                        <input type="text" id="food_name"
+                               maxlength="100" required
+                               placeholder="Enter food name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="Pizza">Pizza</option>
+                            <option value="Burger">Burger</option>
+                            <option value="Biryani">Biryani</option>
+                            <option value="Pasta">Pasta</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Beverage">Beverage</option>
+                            <option value="Starter">Starter</option>
+                            <option value="Main Course">Main Course</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price (₹)</label>
+                        <input type="number" id="price"
+                               min="0" max="99999999.99"
+                               step="0.01" required
+                               placeholder="Example: 249.00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description"
+                                  rows="4"
+                                  placeholder="Describe your delicious dish..."></textarea>
+                    </div>
+                    
+<!-- FOOD IMAGE UPLOAD -->
+<div class="form-group food-upload-group">
+
+    <label for="food_image">
+        Food Image
+    </label>
+
+    <div class="food-upload-box">
+        <span class="upload-icon">📸</span>
+
+        <h3>Upload Your Delicious Dish</h3>
+
+        <p>JPG, PNG or WebP • Maximum 5 MB</p>
+
+        <input
+            type="file"
+            id="food_image"
+            name="food_image"
+            accept=".jpg,.jpeg,.png,.webp"
+            required
+        >
+    </div>
+
+    <!-- LIVE IMAGE PREVIEW -->
+    <div id="imagePreviewBox"
+         class="image-preview-box"
+         hidden>
+
+        <img
+            id="imagePreview"
+            alt="Selected food image preview"
+        >
+
+            <p>✨ Your selected food image</p>
+         </div>
+
+              </div>
+
+
+                    <div class="form-group">
+                        <label for="availability">Availability</label>
+                        <select id="availability" required>
+                            <option value="">-- Select Availability --</option>
+                            <option value="1">Available</option>
+                            <option value="0">Unavailable</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary add-submit">
+                        + Add Food Item
+                    </button>
+
+                    <p id="addMessage" role="status"></p>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h2>Harika's Flavour House</h2>
+        <p>A World of Flavours, One Destination.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="list.html">Menu</a>
+            <a href="insert.html">Add Food</a>
+            <a href="update.html">Update</a>
+            <a href="delete.html">Delete</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Harika's Flavour House. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="js/insert.js"></script>
+</body>
+</html>
